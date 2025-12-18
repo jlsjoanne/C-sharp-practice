@@ -1,0 +1,7 @@
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1208-HW-01\1208-HW-01\bin\Debug\1208-HW-01.exe.config
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1208-HW-01\1208-HW-01\bin\Debug\1208-HW-01.exe
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1208-HW-01\1208-HW-01\bin\Debug\1208-HW-01.pdb
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1208-HW-01\1208-HW-01\obj\Debug\1208-HW-01.csproj.AssemblyReference.cache
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1208-HW-01\1208-HW-01\obj\Debug\1208-HW-01.csproj.CoreCompileInputs.cache
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1208-HW-01\1208-HW-01\obj\Debug\1208-HW-01.exe
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1208-HW-01\1208-HW-01\obj\Debug\1208-HW-01.pdb
