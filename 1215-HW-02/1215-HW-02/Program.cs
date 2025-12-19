@@ -11,7 +11,46 @@ namespace _1215_HW_02
     {
         static void Main(string[] args)
         {
+            //execute exercise
+
+            //execute ch3 3-1 to 3-7 and extra 1-3
+            ch3_3_1();
+            ch3_3_2();
+            ch3_3_3();
+            ch3_3_4();
+            ch3_3_5();
+            ch3_3_6();
+            ch3_3_7();
+            ch3_extra_1();
+            ch3_extra_2();
+            ch3_extra_3();
+
+            //execute ch3 3-1 to 3-7 and extra 1-3 with while loop
+            ch3_3_1_while();
+            ch3_3_2_while();
+            ch3_3_3_while();
+            ch3_3_4_while();
+            ch3_3_5_while();
+            ch3_3_6_while();
+            ch3_3_7_while();
+            ch3_extra_1_while();
+            ch3_extra_2_while();
+            ch3_extra_3_while();
+
+            //execute ch4 4-1 to 4-5 and extra
+            ch4_4_1();
+            ch4_4_2();
+            ch4_4_3();
+            ch4_4_4();
+            ch4_4_5();
+            ch4_extra_1();
+            ch4_extra_2();
+            ch4_extra_3();
+
+            //execute bonus
+            bonus_1();
             bonus_2();
+
             Console.ReadKey();
         }
 
@@ -90,6 +129,7 @@ namespace _1215_HW_02
             {
                 Console.Write($"{over_12[i]} ");
             }
+            Console.Write("\n");
         }
 
         //3-4
@@ -195,6 +235,7 @@ namespace _1215_HW_02
             old_list.ForEach(i => Console.Write($"{i} "));
             Console.Write("\n負數轉換為正數後結果為:");
             new_list.ForEach(i => Console.Write($"{i} "));
+            Console.Write("\n");
         }
 
         //CH3 補充1
@@ -371,6 +412,7 @@ namespace _1215_HW_02
 
             Console.Write("大於12的數字為:");
             over_12.ForEach(i => Console.Write($"{i} "));
+            Console.Write("\n");
         }
 
         //3-4
@@ -486,6 +528,7 @@ namespace _1215_HW_02
             old_list.ForEach(i => Console.Write($"{i} "));
             Console.Write("\n負數轉為正數後為:");
             new_list.ForEach(i => Console.Write($"{i} "));
+            Console.Write("\n");
         }
 
         //ch3 補充習題改while
