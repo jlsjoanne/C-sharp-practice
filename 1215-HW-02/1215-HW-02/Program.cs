@@ -11,7 +11,7 @@ namespace _1215_HW_02
     {
         static void Main(string[] args)
         {
-            ch4_4_5();
+            bonus_2();
             Console.ReadKey();
         }
 
@@ -743,6 +743,161 @@ namespace _1215_HW_02
             }
 
             Console.WriteLine("沒有任何ai > bi");
+        }
+
+        //ch4 補充題目
+        
+        //1
+        static void ch4_extra_1()
+        {
+            int idx = 0, time;
+
+            Console.WriteLine("1.Eric覺得麥蒂勞的39元漢堡實在太便宜、太好吃了，因此他決定晚餐要把口袋裡所有錢通通拿來吃39元漢堡。假設他每5分鐘就能吃一個漢堡，請隨意輸入一個時間，輸出這段時間吃漢堡的紀錄。");
+            Console.WriteLine("輸入時間(分鐘)");
+            time = Convert.ToInt32(Console.ReadLine());
+
+            int count = time / 5;
+
+            while( idx <= count)
+            {
+                Console.WriteLine($"第{idx * 5}分鐘吃第{idx+1}個漢堡");
+                idx += 1;
+            }
+        }
+
+        //2
+        static void ch4_extra_2()
+        {
+            int idx = 0, cost = 560;
+
+            Console.WriteLine("2.小明貸款買房花560萬，每個月可還4萬，每還12個月，因為年終獎金可以多還一萬，請問需要幾個月還清。");
+
+            while (cost > 0)
+            {
+                idx += 1;
+                cost -= 4;
+                if (idx % 12 == 0)
+                {
+                    cost -= 1;
+                }
+
+                //Console.WriteLine($"第{idx}個月 小明還有{cost}萬貸款");
+
+                
+            }
+
+            Console.WriteLine($"小明貸款需要{idx}個月還清");
+        }
+
+        //3
+        static void ch4_extra_3()
+        {
+            var rand = new Random();
+
+            int random_num = rand.Next();
+
+            Console.WriteLine("3.系統隨機產生一個數字，讓使用者數入數字，直到猜中才離開程式！，猜錯時，要提示是比較大還是比較小。");
+            Console.WriteLine("輸入一個數字");
+            int guess = Convert.ToInt32(Console.ReadLine());
+
+            while(guess != random_num)
+            {
+                if (guess > random_num)
+                {
+                    Console.WriteLine("隨機數字比較小");
+                }
+                else if (guess < random_num)
+                {
+                    Console.WriteLine("隨機數字比較大");
+                }
+
+                Console.WriteLine("再猜一次，請再輸入一個數字");
+                guess = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine($"猜中!隨機數字為{random_num}");
+
+
+        }
+
+        //Bonus題
+
+        //bonus 1
+        static void bonus_1()
+        {
+            int n;
+            string icon;
+
+            Console.WriteLine("客製化的聖誕樹");
+            Console.WriteLine("請問要建立多高的聖誕樹");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("請輸入聖誕樹要顯示的符號");
+            icon = Console.ReadLine();
+            Console.WriteLine("開始建立聖誕樹.....");
+
+            for (int i = 0; i < n; i++)
+            {
+
+                for (int j = n - i; j > 0; j--)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 0; j < (2 * i + 1); j++)
+                {
+                    Console.Write($"{icon}");
+                }
+
+                Console.WriteLine();
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < n - 1; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < 3; j++)
+                {
+                    if (j == 2)
+                    {
+                        Console.Write($"{icon}\n");
+                    }
+                    else
+                    {
+                        Console.Write($"{icon}");
+                    }
+                    
+                }
+                
+            }
+
+            Console.WriteLine("聖誕樹建立完成.....");
+            Console.WriteLine("請按任意鍵繼續");
+            Console.ReadKey();
+
+        }
+
+        //bonus 2
+        static void bonus_2()
+        {
+            int n;
+            Console.WriteLine("用遞迴(Recursion)方式寫出費波那契數列：輸入整數N，輸出fibonacci(N) [費氏數列的第N個數]");
+            Console.WriteLine("輸入N");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"費式數列的第{n}個數為{Fibonacci(n)}");
+        }
+
+        static int Fibonacci(int n)
+        {
+            if (n == 0 | n == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return Fibonacci(n-1) + Fibonacci(n - 2);
+            }
         }
     }
 }
