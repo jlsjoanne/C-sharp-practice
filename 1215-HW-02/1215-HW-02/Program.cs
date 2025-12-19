@@ -11,7 +11,7 @@ namespace _1215_HW_02
     {
         static void Main(string[] args)
         {
-            ch4_4_5();
+            ch4_extra_3();
             Console.ReadKey();
         }
 
@@ -743,6 +743,81 @@ namespace _1215_HW_02
             }
 
             Console.WriteLine("沒有任何ai > bi");
+        }
+
+        //ch4 補充題目
+        
+        //1
+        static void ch4_extra_1()
+        {
+            int idx = 0, time;
+
+            Console.WriteLine("1.Eric覺得麥蒂勞的39元漢堡實在太便宜、太好吃了，因此他決定晚餐要把口袋裡所有錢通通拿來吃39元漢堡。假設他每5分鐘就能吃一個漢堡，請隨意輸入一個時間，輸出這段時間吃漢堡的紀錄。");
+            Console.WriteLine("輸入時間(分鐘)");
+            time = Convert.ToInt32(Console.ReadLine());
+
+            int count = time / 5;
+
+            while( idx <= count)
+            {
+                Console.WriteLine($"第{idx * 5}分鐘吃第{idx+1}個漢堡");
+                idx += 1;
+            }
+        }
+
+        //2
+        static void ch4_extra_2()
+        {
+            int idx = 0, cost = 560;
+
+            Console.WriteLine("2.小明貸款買房花560萬，每個月可還4萬，每還12個月，因為年終獎金可以多還一萬，請問需要幾個月還清。");
+
+            while (cost > 0)
+            {
+                idx += 1;
+                cost -= 4;
+                if (idx % 12 == 0)
+                {
+                    cost -= 1;
+                }
+
+                //Console.WriteLine($"第{idx}個月 小明還有{cost}萬貸款");
+
+                
+            }
+
+            Console.WriteLine($"小明貸款需要{idx}個月還清");
+        }
+
+        //3
+        static void ch4_extra_3()
+        {
+            var rand = new Random();
+
+            int random_num = rand.Next();
+
+            Console.WriteLine("3.系統隨機產生一個數字，讓使用者數入數字，直到猜中才離開程式！，猜錯時，要提示是比較大還是比較小。");
+            Console.WriteLine("輸入一個數字");
+            int guess = Convert.ToInt32(Console.ReadLine());
+
+            while(guess != random_num)
+            {
+                if (guess > random_num)
+                {
+                    Console.WriteLine("隨機數字比較小");
+                }
+                else if (guess < random_num)
+                {
+                    Console.WriteLine("隨機數字比較大");
+                }
+
+                Console.WriteLine("再猜一次，請再輸入一個數字");
+                guess = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine($"猜中!隨機數字為{random_num}");
+
+
         }
     }
 }
