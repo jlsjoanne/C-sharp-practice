@@ -11,7 +11,7 @@ namespace _1215_HW_02
     {
         static void Main(string[] args)
         {
-            ch4_extra_3();
+            bonus_2();
             Console.ReadKey();
         }
 
@@ -818,6 +818,86 @@ namespace _1215_HW_02
             Console.WriteLine($"猜中!隨機數字為{random_num}");
 
 
+        }
+
+        //Bonus題
+
+        //bonus 1
+        static void bonus_1()
+        {
+            int n;
+            string icon;
+
+            Console.WriteLine("客製化的聖誕樹");
+            Console.WriteLine("請問要建立多高的聖誕樹");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("請輸入聖誕樹要顯示的符號");
+            icon = Console.ReadLine();
+            Console.WriteLine("開始建立聖誕樹.....");
+
+            for (int i = 0; i < n; i++)
+            {
+
+                for (int j = n - i; j > 0; j--)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 0; j < (2 * i + 1); j++)
+                {
+                    Console.Write($"{icon}");
+                }
+
+                Console.WriteLine();
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < n - 1; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < 3; j++)
+                {
+                    if (j == 2)
+                    {
+                        Console.Write($"{icon}\n");
+                    }
+                    else
+                    {
+                        Console.Write($"{icon}");
+                    }
+                    
+                }
+                
+            }
+
+            Console.WriteLine("聖誕樹建立完成.....");
+            Console.WriteLine("請按任意鍵繼續");
+            Console.ReadKey();
+
+        }
+
+        //bonus 2
+        static void bonus_2()
+        {
+            int n;
+            Console.WriteLine("用遞迴(Recursion)方式寫出費波那契數列：輸入整數N，輸出fibonacci(N) [費氏數列的第N個數]");
+            Console.WriteLine("輸入N");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"費式數列的第{n}個數為{Fibonacci(n)}");
+        }
+
+        static int Fibonacci(int n)
+        {
+            if (n == 0 | n == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return Fibonacci(n-1) + Fibonacci(n - 2);
+            }
         }
     }
 }
