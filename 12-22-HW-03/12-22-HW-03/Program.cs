@@ -10,7 +10,39 @@ namespace _12_22_HW_03
     {
         static void Main(string[] args)
         {
-            ch5_5_7();
+            string exercise_no;
+            
+            Console.WriteLine("輸入習題編號 5-1,5-2,....,5-7");
+            exercise_no = Console.ReadLine();
+
+            switch (exercise_no)
+            {
+                case "5-1":
+                    ch5_5_1();
+                    break;
+                case "5-2":
+                    ch5_5_2();
+                    break;
+                case "5-3":
+                    ch5_5_3();
+                    break;
+                case "5-4":
+                    ch5_5_4();
+                    break;
+                case "5-5":
+                    ch5_5_5();
+                    break;
+                case "5-6":
+                    ch5_5_6();
+                    break;
+                case "5-7":
+                    ch5_5_7();
+                    break;
+                default:
+                    Console.WriteLine("輸入錯誤");
+                    break;
+            }
+
             Console.ReadKey();
 
         }
@@ -26,7 +58,7 @@ namespace _12_22_HW_03
 
             for (int i= 0;i < arr.Length; i++)
             {
-                Console.Write($"讀入第{i+1}個數字");
+                Console.WriteLine($"輸入第{i+1}個數字");
                 arr[i] = Convert.ToInt32(Console.ReadLine());
                 if (arr[i] > 5)
                 {
@@ -55,7 +87,7 @@ namespace _12_22_HW_03
             
             for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine($"請輸入第{i + 1}個數字");
+                Console.WriteLine($"輸入第{i + 1}個數字");
 
                 if (i == 0)
                 {
@@ -81,7 +113,7 @@ namespace _12_22_HW_03
             int[] A = new int[10];
             int[] B = new int[10];
 
-            Console.WriteLine("5-3.寫一程式，將10個數字讀入A陣列，並建立一個B陣列，如A[i]≥0，令B[i]=1，否則令B[i]=0");
+            Console.WriteLine("5-3.寫一程式，將10個數字讀入A陣列，並建立一個B陣列，如A[i]>=0，令B[i]=1，否則令B[i]=0");
 
             //input number
             for (int i = 0; i < A.Length; i++)
