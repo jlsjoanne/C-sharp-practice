@@ -10,7 +10,7 @@ namespace _12_22_HW_03
     {
         static void Main(string[] args)
         {
-            ch5_5_4();
+            ch5_5_7();
             Console.ReadKey();
 
         }
@@ -151,6 +151,123 @@ namespace _12_22_HW_03
             for(int j = 0; j < 5; j++)
             {
                 Console.WriteLine($"第{j + 1}行的和為: {col_sum[j]}");
+            }
+        }
+
+        //5-5
+        static void ch5_5_5()
+        {
+            int[,] A = new int[3, 5];
+            int[] row_min = new int[3];
+            int[] col_min = new int[5];
+
+            Console.WriteLine("5-5.寫一程式，將15數字存入3×5的二維陣列A中，求每一行及每一列數字的最小值");
+
+            for (int i = 0; i < 3; i++)
+            {
+                int min = int.MaxValue;
+
+                for(int j = 0; j < 5; j++)
+                {
+                    Console.WriteLine($"輸入第{i*5 + j + 1}個數字");
+                    A[i, j] = Convert.ToInt32(Console.ReadLine());
+                    if (A[i,j] < min)
+                    {
+                        min = A[i, j];
+                    }
+                }
+                row_min[i] = min;
+            }
+
+            for(int j =0;j < 5; j++)
+            {
+                int min = int.MaxValue;
+                for(int i = 0; i< 3; i++)
+                {
+                    if (A[i,j] < min)
+                    {
+                        min = A[i, j];
+                    }
+                }
+                col_min[j] = min;
+            }
+
+            for(int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"第{i + 1}列最小值為{row_min[i]}");
+            }
+            for(int j = 0; j < 5; j++)
+            {
+                Console.WriteLine($"第{j + 1}行最小值為{col_min[j]}");
+            }
+        }
+
+        //5-6
+        static void ch5_5_6()
+        {
+            int[] a = new int[5];
+            int[] b = new int[5];
+
+            Console.WriteLine("5-6.寫一程式，輸入兩組數字：a1,a2,…,a5和b1,b2,…,b5。求ai+bi，i=1到i=5");
+            
+
+            for (int i = 0;i < 5; i++)
+            {
+                Console.WriteLine($"輸入a{i + 1}");
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"輸入b{i + 1}");
+                b[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for(int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"a{i + 1} + b{i + 1} = {a[i] + b[i]}");
+            }
+
+        }
+
+        //5-7
+        static void ch5_5_7()
+        {
+            int x = int.MinValue, y = int.MinValue;
+            int[] a = new int[5];
+            int[] b = new int[5];
+
+            Console.WriteLine("5-7.寫一程式，輸入兩組數字： a1,a2,…,a5和b1,b2,…,b5。令x為a中的最大值，令y為b中的最大值，求x與y中較小者");
+
+            for(int i = 0;i < 5; i++)
+            {
+                Console.WriteLine($"輸入a{i + 1}");
+                a[i] = Convert.ToInt32(Console.ReadLine());
+                if (a[i] > x)
+                {
+                    x = a[i];
+                }
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"輸入b{i + 1}");
+                b[i] = Convert.ToInt32(Console.ReadLine());
+                if (b[i] > y)
+                {
+                    y = b[i];
+                }
+            }
+
+            if(x < y)
+            {
+                Console.WriteLine($"x較小, x = {x}");
+            }
+            else if(y < x)
+            {
+                Console.WriteLine($"y較小, y = {y}");
+            }
+            else
+            {
+                Console.WriteLine($"x=y={x}");
             }
         }
 
