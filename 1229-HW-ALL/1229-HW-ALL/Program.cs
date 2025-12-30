@@ -10,7 +10,8 @@ namespace _1229_HW_ALL
     {
         static void Main(string[] args)
         {
-            CH6.Exercise_7();
+            CH6.Extra_6();
+            Console.ReadKey();
         }
     }
 }

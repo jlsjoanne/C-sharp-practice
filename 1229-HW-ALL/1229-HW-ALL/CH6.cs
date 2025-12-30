@@ -140,6 +140,102 @@ namespace _1229_HW_ALL
             }
         }
 
+        //補充2
+        //用字母大小寫來模擬波浪舞的動作後輸出
+        internal static void Extra_2()
+        {
+            Console.WriteLine("輸入文字");
+            string text = Console.ReadLine();
+            int len = text.Length;
+
+            for(int i = 0; i < len; i++)
+            {
+                text = text.ToLower();
+                char[] chars = text.ToCharArray();
+                chars[i] = Char.ToUpper(chars[i]);
+                text = string.Concat(chars);
+
+                Console.WriteLine(text);
+            }
+        }
+
+        //補充3
+        //輸入時間，顯示幾時幾分，例如輸入11:30，輸出11點30分
+        internal static void Extra_3()
+        {
+            Console.WriteLine("輸入時間");
+            string time = Console.ReadLine();
+            string[] tsplit = time.Split(':');
+
+            if (tsplit.Length != 2)
+            {
+                Console.WriteLine("輸入錯誤");
+                return;
+            }
+            int hour = Convert.ToInt32(tsplit[0]);
+            int minute = Convert.ToInt32(tsplit[1]);
+
+            if (hour < 24 & hour >=0 & minute < 60 & minute >= 0)
+            {
+                Console.WriteLine($"{hour}點{minute}分");
+                return;
+            }
+
+            Console.WriteLine("時間格式輸入錯誤");
+        }
+
+        //補充4
+        //輸入的字，轉成HTML
+        internal static void Extra_4()
+        {
+            Console.WriteLine("輸入文字");
+
+            string input = Console.ReadLine();
+            string[] input_arr = input.Split(',');
+
+            Console.WriteLine("<ul>");
+
+            for (int i = 0; i < input_arr.Length; i++)
+            {
+                Console.WriteLine($"\t<li>{input_arr[i]}</li>");
+            }
+            Console.WriteLine("</ul>");
+        }
+
+        //補充5
+        //輸入多個數字，用空白隔開，輸出結果。例如：輸入‘11 19 12 25 1 7 12，輸出總和是87
+        internal static void Extra_5()
+        {
+            int sum = 0;
+            
+            Console.WriteLine("輸入數字，以空白隔開");
+            string input = Console.ReadLine();
+            string[] nums = input.Split(' ');
+            int len = nums.Length;
+
+            for (int i = 0; i< len; i++)
+            {
+                sum += Convert.ToInt32(nums[i]);
+            }
+
+            Console.WriteLine($"總和為{sum}");
+        }
+
+        //補充6
+        //輸入一串文字，倒著輸出，例如輸入：Justin，輸出nitsuJ
+        internal static void Extra_6()
+        {
+            Console.WriteLine("輸入一串文字");
+            string text = Console.ReadLine();
+            int len = text.Length;
+
+            for(int i = len-1; i >=0; i--)
+            {
+                Console.Write(text[i]);
+            }
+            Console.Write("\n");
+            
+        }
 
     }
 }
