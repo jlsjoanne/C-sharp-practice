@@ -260,5 +260,39 @@ namespace _1229_HW_ALL
             Console.WriteLine("寫入完成");
         }
 
+        //補充題
+        //補充1
+        //請設計樂透開獎程式
+        internal static void Random_extra_1()
+        {
+            Random rand = new Random();
+            List<int> result = new List<int>();
+
+            while(result.Count != 6)
+            {
+                int num = rand.Next(1, 50);
+                if(result.Contains(num) == false)
+                {
+                    result.Add(num);
+                }
+            }
+
+            Console.WriteLine("樂透開獎號碼為:");
+            foreach(int i in result)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.Write("\n");
+        }
+
+        internal static void Random_extra_2()
+        {
+            Random rand = new Random();
+            string[] rNames = File.ReadAllLines(path + "Restaurant.txt");
+            int idx = rand.Next(0, rNames.Length);
+
+            Console.WriteLine($"今天中午吃{rNames[idx]}");
+            
+        }
     }
 }
