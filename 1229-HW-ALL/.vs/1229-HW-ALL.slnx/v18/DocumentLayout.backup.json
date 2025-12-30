@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{782CA9DA-6DFC-4463-B465-78CAE875ADAB}|1229-HW-ALL\\1229-HW-ALL.csproj|c:\\users\\jlsjo\\documents\\rocketcamp\\c-sharp-practice\\1229-hw-all\\1229-hw-all\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{782CA9DA-6DFC-4463-B465-78CAE875ADAB}|1229-HW-ALL\\1229-HW-ALL.csproj|C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-hw-all\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{782CA9DA-6DFC-4463-B465-78CAE875ADAB}|1229-HW-ALL\\1229-HW-ALL.csproj|solutionrelative:1229-hw-all\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782CA9DA-6DFC-4463-B465-78CAE875ADAB}|1229-HW-ALL\\1229-HW-ALL.csproj|c:\\users\\jlsjo\\documents\\rocketcamp\\c-sharp-practice\\1229-hw-all\\1229-hw-all\\ch6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782CA9DA-6DFC-4463-B465-78CAE875ADAB}|1229-HW-ALL\\1229-HW-ALL.csproj|solutionrelative:1229-hw-all\\ch6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +28,22 @@
               "RelativeDocumentMoniker": "1229-HW-ALL\\Program.cs",
               "ToolTip": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\Program.cs",
               "RelativeToolTip": "1229-HW-ALL\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-29T01:04:57.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CH6.cs",
+              "DocumentMoniker": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\CH6.cs",
+              "RelativeDocumentMoniker": "1229-HW-ALL\\CH6.cs",
+              "ToolTip": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\CH6.cs",
+              "RelativeToolTip": "1229-HW-ALL\\CH6.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAxwGwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T01:06:43.427Z",
               "EditorCaption": ""
             }
           ]
