@@ -203,22 +203,26 @@ namespace _1229_HW_ALL
         }
 
         //補充5
-        //輸入多個數字，用空白隔開，輸出結果。例如：輸入‘11 19 12 25 1 7 12，輸出總和是87
+        //輸入5處數字，用空白隔開，輸出結果。例如：輸入‘11 19 12 25 1 7 12，輸出總和是87
         internal static void Extra_5()
         {
             int sum = 0;
             
-            Console.WriteLine("輸入數字，以空白隔開");
+            Console.WriteLine("輸入5處數字，以空白隔開");
             string input = Console.ReadLine();
             string[] nums = input.Split(' ');
-            int len = nums.Length;
 
-            for (int i = 0; i< len; i++)
+            if (nums.Length > 5)
+            {
+                Console.WriteLine("警告:輸入數字超過5個");
+            }
+            for (int i = 0; i< 5; i++)
             {
                 sum += Convert.ToInt32(nums[i]);
             }
+            
 
-            Console.WriteLine($"總和為{sum}");
+            Console.WriteLine($"前5處數字總和為{sum}");
         }
 
         //補充6
