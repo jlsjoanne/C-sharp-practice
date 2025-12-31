@@ -7,7 +7,7 @@ using System.IO;
 
 namespace _1229_HW_ALL
 {
-    internal class CH7
+    internal class exerciseCH7
     {
         internal static string path = @"C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\sample-file\";
         //檔案處理

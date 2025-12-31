@@ -10,7 +10,7 @@ namespace _1229_HW_ALL
     {
         static void Main(string[] args)
         {
-            CH7.DT_Extra_3();
+            Console.WriteLine(exerciseFunction.Exercise_3("userdomain.com"));
             Console.ReadKey();
         }
     }

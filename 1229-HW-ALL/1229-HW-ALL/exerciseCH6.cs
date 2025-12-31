@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace _1229_HW_ALL
 {
-    internal class CH6
+    internal class exerciseCH6
     {
         //6-1
         //輸入姓名，輸出 Hi~輸入的姓名，比如說輸入Justin，輸出Hi~Justin
