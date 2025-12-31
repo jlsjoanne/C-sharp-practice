@@ -10,7 +10,7 @@ namespace _1229_HW_ALL
     {
         static void Main(string[] args)
         {
-            CH6.Extra_5();
+            CH7.DT_Extra_3();
             Console.ReadKey();
         }
     }
