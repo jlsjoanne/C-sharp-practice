@@ -1,0 +1,7 @@
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1229-HW-ALL\1229-HW-ALL\bin\Debug\1229-HW-ALL.exe.config
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1229-HW-ALL\1229-HW-ALL\bin\Debug\1229-HW-ALL.exe
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1229-HW-ALL\1229-HW-ALL\bin\Debug\1229-HW-ALL.pdb
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1229-HW-ALL\1229-HW-ALL\obj\Debug\1229-HW-ALL.csproj.AssemblyReference.cache
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1229-HW-ALL\1229-HW-ALL\obj\Debug\1229-HW-ALL.csproj.CoreCompileInputs.cache
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1229-HW-ALL\1229-HW-ALL\obj\Debug\1229-HW-ALL.exe
+C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\1229-HW-ALL\1229-HW-ALL\obj\Debug\1229-HW-ALL.pdb
