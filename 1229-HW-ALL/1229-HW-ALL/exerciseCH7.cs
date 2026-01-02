@@ -13,12 +13,12 @@ namespace _1229_HW_ALL
         //檔案處理
         //1
         //寫一篇中文歌的歌詞到到自己指定的文字檔(使用UTF-8編碼)。
-        internal static void Exercise_File_1()
+        internal static void File_Exercise_1()
         {
-            string lyrics = @"本來應該從從容容 游刃有餘
-現在是匆匆忙忙 連滾帶爬
-睜眼說瞎話 你在哽咽什麼啦
-你在哭什麼哭 沒出息！";
+            string lyrics = "本來應該從從容容 游刃有餘\n" +
+                "現在是匆匆忙忙 連滾帶爬\n" +
+                "睜眼說瞎話 你在哽咽什麼啦\n" +
+                "你在哭什麼哭 沒出息！";
             File.WriteAllText(path + "1.txt", lyrics);
 
             Console.WriteLine("歌詞寫入檔案完成");
@@ -27,7 +27,7 @@ namespace _1229_HW_ALL
 
         //2
         //讀取1.txt 顯示在畫面上。
-        internal static void Exercise_File_2()
+        internal static void File_Exercise_2()
         {
 
             Console.WriteLine("讀取1.txt 顯示在畫面上");
@@ -218,7 +218,7 @@ namespace _1229_HW_ALL
         //亂數
         //1
         //請隨機由0~99產生一個數字輸出。
-        internal static void Exercise_Random_1()
+        internal static void Random_Exercise_1()
         {
             Random rom = new Random();
             int i = rom.Next(0, 100);
@@ -229,7 +229,7 @@ namespace _1229_HW_ALL
 
         //2
         //請隨機由0~99產生10個數字輸出。
-        internal static void Exercise_Random_2()
+        internal static void Random_Exercise_2()
         {
             Random rand = new Random();
 
@@ -243,7 +243,7 @@ namespace _1229_HW_ALL
 
         //3
         //隨機幫每位學員產生成績，並寫入文字檔(欄位之間用，分開，換行寫入下一筆)。
-        internal static void Exercise_Random_3()
+        internal static void Random_Exercise_3()
         {
             string[] student_name = File.ReadAllLines(path + "Student-100.txt");
             int student_num = student_name.Length;
