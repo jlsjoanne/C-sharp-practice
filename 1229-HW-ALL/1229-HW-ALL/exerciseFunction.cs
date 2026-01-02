@@ -32,13 +32,11 @@ namespace _1229_HW_ALL
 
             html += (input + "\n" + "</body>\n" + "</html>");
 
-            File.WriteAllText(path,html);
+            File.WriteAllText(path + "\\output.html",html);
         }
 
         //題目二
         //寫一個function，回傳輸入的值是否數字
-        
-
         internal static bool isNum(string input)
         {
             double num;
@@ -49,7 +47,6 @@ namespace _1229_HW_ALL
 
         //題目三
         //寫一個function，回傳輸入的值是否符合E-mail格式
-
         internal static bool isEmail(string input)
         {
             string email_syntax = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
@@ -57,9 +54,8 @@ namespace _1229_HW_ALL
             return is_email;
         }
 
-        //4
+        //題目四
         //寫一個function，回傳輸入的值是否符合手機格式
-
         internal static bool isMobile(string input)
         {
             string mobile_regex = @"09\d{2}(\d{6}|-\d{3}-\d{3})";
@@ -69,13 +65,9 @@ namespace _1229_HW_ALL
 
         }
 
-        //5
+        //題目5
         //寫一個function，回傳輸入的值是否符合身分證字號格式
 
-        internal static void Exercise_5()
-        {
-            Console.WriteLine("請輸入值");
-            string input = Console.ReadLine
-        }
+        
     }
 }

@@ -15,13 +15,14 @@ namespace _1229_HW_ALL
         //寫一篇中文歌的歌詞到到自己指定的文字檔(使用UTF-8編碼)。
         internal static void File_Exercise_1()
         {
+            
             string lyrics = "本來應該從從容容 游刃有餘\n" +
                 "現在是匆匆忙忙 連滾帶爬\n" +
                 "睜眼說瞎話 你在哽咽什麼啦\n" +
                 "你在哭什麼哭 沒出息！";
             File.WriteAllText(path + "1.txt", lyrics);
 
-            Console.WriteLine("歌詞寫入檔案完成");
+            Console.WriteLine("歌詞寫入檔案\"1.txt\"完成");
             
         }
 
@@ -207,7 +208,7 @@ namespace _1229_HW_ALL
 
             output += "</table>";
 
-            Console.WriteLine("輸入HTML檔名");
+            Console.WriteLine("輸入欲寫入的檔案名稱");
             string fileName = Console.ReadLine();
 
             File.WriteAllText(path + fileName + ".html", output);
@@ -342,7 +343,7 @@ namespace _1229_HW_ALL
                 }
                 else
                 {
-                    Console.WriteLine("輸入錯誤值，程式結束");
+                    Console.WriteLine("輸入錯誤，程式結束");
                     break;
                 }
             }
@@ -401,9 +402,19 @@ namespace _1229_HW_ALL
         {
             DateTime compare_date = new DateTime(2025, 1, 1);
             DateTime today = DateTime.Today;
+            int day_dist = compare_date.Subtract(today).Days;
 
-            Console.WriteLine($"距離2025年1月1日還有{compare_date.Subtract(today).Days}天");
+            if (day_dist >= 0)
+            {
+                Console.WriteLine($"距離2025年1月1日還有{day_dist}天");
+            }
+            else
+            {
+                Console.WriteLine($"距離2025年1月1日已經過了{Math.Abs(day_dist)}天");
+            }
         }
+
+            
 
         //補充題
         //1
