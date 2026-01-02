@@ -22,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\Program.cs",
-              "RelativeDocumentMoniker": "1229-HW-ALL\\Program.cs",
-              "ToolTip": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\Program.cs",
-              "RelativeToolTip": "1229-HW-ALL\\Program.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAswJsAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T01:04:57.458Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -45,7 +32,7 @@
               "RelativeDocumentMoniker": "1229-HW-ALL\\exerciseFunction.cs",
               "ToolTip": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\exerciseFunction.cs",
               "RelativeToolTip": "1229-HW-ALL\\exerciseFunction.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAowK8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-31T09:20:27.809Z",
               "EditorCaption": ""
@@ -58,9 +45,22 @@
               "RelativeDocumentMoniker": "1229-HW-ALL\\exerciseCH7.cs",
               "ToolTip": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\exerciseCH7.cs",
               "RelativeToolTip": "1229-HW-ALL\\exerciseCH7.cs",
-              "ViewState": "AgIAANwBAAAAAAAAAAAYwPUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAACAAAAAAAAAAAYwAwCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T02:39:47.394Z",
+              "WhenOpened": "2026-01-02T07:30:47.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\Program.cs",
+              "RelativeDocumentMoniker": "1229-HW-ALL\\Program.cs",
+              "ToolTip": "C:\\Users\\jlsjo\\Documents\\RocketCamp\\C-sharp-practice\\1229-HW-ALL\\1229-HW-ALL\\Program.cs",
+              "RelativeToolTip": "1229-HW-ALL\\Program.cs",
+              "ViewState": "AgIAACYBAAAAAAAAAAAvwDcBAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T01:04:57.458Z",
               "EditorCaption": ""
             }
           ]

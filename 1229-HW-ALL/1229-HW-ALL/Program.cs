@@ -185,7 +185,7 @@ namespace _1229_HW_ALL
                         string text = Console.ReadLine();
                         Console.WriteLine("請輸入HTML存入位置");
                         string path = Console.ReadLine();
-                        exerciseFunction.toHTML(text,path);
+                        exerciseFunction.toHTML(text, path);
                         break;
                     case "Function-2":
                         Console.WriteLine("Function-2. 寫一個function，回傳輸入的值是否數字");
@@ -212,7 +212,7 @@ namespace _1229_HW_ALL
                         }
                             break;
                     case "Function-4":
-                        Console.WriteLine("寫一個function，回傳輸入的值是否符合手機格式");
+                        Console.WriteLine("Function-4. 寫一個function，回傳輸入的值是否符合手機格式");
                         bool is_mobile = exerciseFunction.isMobile(exerciseFunction.getInput());
 
                         if (is_mobile)
@@ -225,17 +225,88 @@ namespace _1229_HW_ALL
                         }
                             break;
                     case "Function-5":
-                        break;
+                        Console.WriteLine("Function-5. 寫一個function，回傳輸入的值是否符合身分證字號格式");
+                        bool is_id_card = exerciseFunction.isIDCard(exerciseFunction.getInput());
+
+                        if (is_id_card)
+                        {
+                            Console.WriteLine("輸入的值符合身分證字號格式");
+                        }
+                        else
+                        {
+                            Console.WriteLine("輸入的值不符合身分證字號格式");
+                        }
+                            break;
                     case "Function-6":
+                        Console.WriteLine("Function-6. 寫一個function，若輸入的文字大於N個，" +
+                            "則超過的字不要，變成點點點");
+                        Console.WriteLine("輸入N");
+                        int n = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("輸入文字");
+                        string input_f6 = Console.ReadLine();
+                        Console.WriteLine("輸出結果為" + exerciseFunction.textIgnore(input_f6,n));
                         break;
                     case "Function-7":
-                        break;
+                        Console.WriteLine("Function-7. 寫一個function，輸入一個日期，把該日期轉成民國年.月.日格式");
+                        Console.WriteLine("輸入日期(格式: 年/月/日 或 年-月-日)");
+                        string input_f7 = Console.ReadLine();
+                        if (input_f7.Contains("/"))
+                        {
+                            Console.WriteLine(exerciseFunction.dateToTaiwanCal(input_f7,'/'));
+                        }
+                        else if (input_f7.Contains("-"))
+                        {
+                            Console.WriteLine(exerciseFunction.dateToTaiwanCal(input_f7,'-'));
+                        }
+                        else
+                        {
+                            Console.WriteLine("日期格式輸入錯誤，結束執行Function-7");
+                        }
+
+                            break;
                     case "Function-8":
-                        break;
+                        Console.WriteLine("Function-8. 寫一個function，輸入一個日期，" +
+                            "把該日期轉成民國XX年XX月XX日 星期X");
+                        Console.WriteLine("輸入日期(格式: 年/月/日 或 年-月-日)");
+                        string input_f8 = Console.ReadLine();
+                        if (input_f8.Contains("/"))
+                        {
+                            Console.WriteLine(exerciseFunction.dateToTaiwanCalwWeekDay(input_f8, '/'));
+                        }
+                        else if (input_f8.Contains("-"))
+                        {
+                            Console.WriteLine(exerciseFunction.dateToTaiwanCalwWeekDay(input_f8, '-'));
+                        }
+                        else
+                        {
+                            Console.WriteLine("日期格式輸入錯誤，結束執行Function-8");
+                        }
+                            break;
                     case "Function-9":
-                        break;
+                        Console.WriteLine("Function-9. 寫一個function，回傳輸入的年是否閏年");
+                        bool is_leap = exerciseFunction.isLeap(exerciseFunction.getInput());
+                        if (is_leap)
+                        {
+                            Console.WriteLine("輸入的年是閏年");
+                        }
+                        else
+                        {
+                            Console.WriteLine("輸入的年不是閏年");
+                        }
+                            break;
                     case "Function-10":
-                        break;
+                        Console.WriteLine("Function-10. 寫一個function，輸入手機號碼，回傳今天運勢");
+                        double luck_num = exerciseFunction.getLuck(exerciseFunction.getInput());
+
+                        if (luck_num == 0)
+                        {
+                            Console.WriteLine("輸入的值不符合手機格式");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"今日運勢數字為{luck_num}");
+                        }
+                            break;
                     default:
                         Console.WriteLine("格式輸入錯誤");
                         break;

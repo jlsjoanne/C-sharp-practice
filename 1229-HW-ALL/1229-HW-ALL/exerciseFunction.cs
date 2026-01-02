@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Globalization;
 
 namespace _1229_HW_ALL
 {
     internal class exerciseFunction
     {
 
-        //使用者輸入值function, 用於題目2~5 + 7~10
+        //使用者輸入值function, 用於題目2~5 + 9~10
         internal static string getInput()
         {
             Console.WriteLine("請輸入值");
@@ -50,8 +51,8 @@ namespace _1229_HW_ALL
         internal static bool isEmail(string input)
         {
             string email_syntax = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
-            bool is_email = Regex.IsMatch(input, email_syntax);
-            return is_email;
+
+            return Regex.IsMatch(input, email_syntax);
         }
 
         //題目四
@@ -59,15 +60,121 @@ namespace _1229_HW_ALL
         internal static bool isMobile(string input)
         {
             string mobile_regex = @"09\d{2}(\d{6}|-\d{3}-\d{3})";
-            bool is_mobile = Regex.IsMatch(input, mobile_regex);
 
-            return is_mobile;
+            return Regex.IsMatch(input, mobile_regex);
 
         }
 
-        //題目5
+        //題目五
         //寫一個function，回傳輸入的值是否符合身分證字號格式
+        internal static bool isIDCard(string input)
+        {
+            string idcard_regex = @"^[A-Z][12]\d{8}$";
 
-        
+            return Regex.IsMatch(input, idcard_regex);
+        }
+
+        //題目六
+        //寫一個function，若輸入的文字大於Ｎ個，則超過的字不要，變成點點點
+        internal static string textIgnore(string input, int n)
+        {
+            return input.Substring(0, n) + "...";
+        }
+
+        //題目七
+        //寫一個function，輸入一個日期，把該日期轉成民國年.月.日格式
+        internal static string dateToTaiwanCal(string input, char split_sym)
+        {
+            string[] input_seg = input.Split(split_sym);
+            if (input_seg.Length != 3)
+            {
+                return "日期格式輸入錯誤，結束執行Function-7";
+            }
+
+            DateTime date = new DateTime(Convert.ToInt32(input_seg[0]),
+                Convert.ToInt32(input_seg[1]), Convert.ToInt32(input_seg[2]));
+
+            TaiwanCalendar taiwancal = new TaiwanCalendar();
+            int t_y = taiwancal.GetYear(date);
+            int t_m = date.Month;
+            int t_d = date.Day;
+
+            return $"民國{t_y}年{t_m}月{t_d}日";
+        }
+
+        //題目八
+        //寫一個function，輸入一個日期，把該日期轉成民國XX年XX月XX日 星期X
+        internal static string dateToTaiwanCalwWeekDay(string input, char split_sym)
+        {
+            
+
+            string[] input_seg = input.Split(split_sym);
+            if (input_seg.Length != 3)
+            {
+                return "日期格式輸入錯誤，結束執行Function-8";
+            }
+
+            string tw_date = dateToTaiwanCal(input, split_sym);
+            DateTime date = new DateTime(Convert.ToInt32(input_seg[0]),
+                Convert.ToInt32(input_seg[1]), Convert.ToInt32(input_seg[2]));
+
+            return tw_date + $" 星期{dayOfWeekToCh((int)date.DayOfWeek)}";
+
+
+        }
+
+        internal static string dayOfWeekToCh(int day_of_week)
+        {
+            string day="";
+
+            switch (day_of_week)
+            {
+                case 1:
+                    day = "一";
+                    break;
+                case 2:
+                    day = "二";
+                    break;
+                case 3:
+                    day = "三";
+                    break;
+                case 4:
+                    day = "四";
+                    break;
+                case 5:
+                    day = "五";
+                    break;
+                case 6:
+                    day = "六";
+                    break;
+                case 7:
+                    day = "日";
+                    break;
+            }
+
+            return day;
+        }
+
+        //題目九
+        //寫一個function，回傳輸入的年是否閏年
+        internal static bool isLeap(string input)
+        {
+            return DateTime.IsLeapYear(Convert.ToInt32(input));
+        }
+
+        //題目十
+        //寫一個function，輸入手機號碼，回傳今天運勢
+        internal static int getLuck(string input)
+        {
+            if (!isMobile(input))
+            {
+                return 0;
+            }
+            double last_4_digit = Convert.ToDouble(input.Substring(6));
+            int luck_num = Convert.ToInt32((last_4_digit / 80 - (int)last_4_digit / 80) * 80);
+
+            return luck_num;
+
+        }
     }
 }
