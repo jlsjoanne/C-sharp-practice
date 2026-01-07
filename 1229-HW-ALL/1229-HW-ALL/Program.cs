@@ -296,17 +296,9 @@ namespace _1229_HW_ALL
                             break;
                     case "Function-10":
                         Console.WriteLine("Function-10. 寫一個function，輸入手機號碼，回傳今天運勢");
-                        double luck_num = exerciseFunction.getLuck(exerciseFunction.getInput());
-
-                        if (luck_num == 0)
-                        {
-                            Console.WriteLine("輸入的值不符合手機格式");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"今日運勢數字為{luck_num}");
-                        }
-                            break;
+                        string fortune = exerciseFunction.getLuck(exerciseFunction.getInput());
+                        Console.WriteLine(fortune);
+                        break;
                     default:
                         Console.WriteLine("格式輸入錯誤");
                         break;

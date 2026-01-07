@@ -164,16 +164,34 @@ namespace _1229_HW_ALL
 
         //題目十
         //寫一個function，輸入手機號碼，回傳今天運勢
-        internal static int getLuck(string input)
+        internal static string getLuck(string input)
         {
             if (!isMobile(input))
             {
-                return 0;
+                return "不是手機號碼";
             }
             double last_4_digit = Convert.ToDouble(input.Substring(6));
             int luck_num = Convert.ToInt32((last_4_digit / 80 - (int)last_4_digit / 80) * 80);
 
-            return luck_num;
+            return getFortune(luck_num);
+
+        }
+
+        internal static string getFortune(int luck_num)
+        {
+            Dictionary<int, string> fortuneDict = new Dictionary<int, string>();
+            string[] fortuneFile = File.ReadAllLines(@"C:\Users\jlsjo\Documents\RocketCamp\C-sharp-practice\sample-file\fortune.csv");
+            foreach (string row in fortuneFile)
+            {
+                string[] fortune = row.Split(',');
+                string fortuneText = fortune[1] + "\t" + fortune[2];
+                fortuneDict.Add(Convert.ToInt32(fortune[0]),fortuneText);
+            }
+
+            string getText;
+            bool ifGetVal = fortuneDict.TryGetValue(luck_num, out getText);
+
+            return getText;
 
         }
     }
