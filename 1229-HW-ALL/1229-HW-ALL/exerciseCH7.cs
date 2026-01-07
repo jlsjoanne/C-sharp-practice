@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Microsoft.VisualBasic.FileIO;
 
 namespace _1229_HW_ALL
 {
@@ -173,47 +174,47 @@ namespace _1229_HW_ALL
         //讀取fc4bb.csv，並將此資料轉成HTML TABLE 格式，並儲存到指定的HTML檔裡。
         internal static void File_Extra_3()
         {
-            Console.WriteLine("讀取fc4bb.csv");
-            string[] content = File.ReadAllLines(path + "fc4bb.csv");
+            string filePath = path + "fc4bb.csv";
             string output = "<table>\n";
-            int total_lines = content.Length;
-
-            for (int i = 0; i < total_lines; i++)
+            using (TextFieldParser parser = new TextFieldParser(filePath))
             {
-                string[] elements = content[i].Split(',');
-                int element_num = elements.Length;
-                string lineToHtml = "\t<tr>\n";
+                parser.SetDelimiters(",");
+                parser.HasFieldsEnclosedInQuotes = true;
 
-                //transform table title
-                if (i == 0)
+
+                if (!parser.EndOfData)
                 {
-                    for(int j = 0; j < element_num; j++)
+                    string[] headers = parser.ReadFields();
+                    string lineToHtml = "\t<tr>\n";
+                    foreach (string header in headers)
                     {
-                        lineToHtml += $"\t\t<th>{elements[j]}</th>\n";
+                        lineToHtml += $"\t\t<th>{header}</th>\n";
                     }
+                    lineToHtml += "\t</tr>\n";
+                    output += lineToHtml;
                 }
-                //transform table content
-                else
+                
+
+                while (!parser.EndOfData)
                 {
-                    for(int j = 0; j < element_num; j++)
+                    string[] row = parser.ReadFields();
+                    string lineToHtml = "\t<tr>\n";
+                    foreach(string data in row)
                     {
-                        lineToHtml += $"\t\t<td>{elements[j]}</td>\n";
+                        lineToHtml += $"\t\t<td>{data}</td>\n";
                     }
+                    lineToHtml += "\t</tr>\n";
+                    output += lineToHtml;
                 }
-
-                lineToHtml += "\t</tr>\n";
-
-                output += lineToHtml;
             }
-
             output += "</table>";
-
             Console.WriteLine("輸入欲寫入的檔案名稱");
             string fileName = Console.ReadLine();
 
             File.WriteAllText(path + fileName + ".html", output);
 
             Console.WriteLine("轉成HTML table完成");
+
         }
 
         //亂數
